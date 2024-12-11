@@ -43,3 +43,18 @@ async def post_exemplo(exemplo: exemploModel.Exemplo, db: Session = Depends(get_
     db.refresh(db_exemplo)
 
     return db_exemplo
+
+
+# Exemplo de um método PUT
+@router.put("/{exemplo_id}")
+async def put_exemplo(exemplo_id: int, exemplo: exemploModel.Exemplo, db: Session = Depends(get_db)):
+    db_exemplo = db.query(exemploTable.Exemplo).filter(exemploTable.Exemplo.id == exemplo_id).first()
+    if db_exemplo:
+        db_exemplo.name = exemplo.name
+        db_exemplo.description = exemplo.cpf
+        db_exemplo.motherName = exemplo.motherName
+        db_exemplo.rg = exemplo.rg
+        db.commit()
+        db.refresh(db_exemplo)
+        return db_exemplo
+    return None

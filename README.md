@@ -1,6 +1,6 @@
-# Nome do Projeto
+# Exemplo de Back-end Python FastAPI
 
-Descrição curta sobre o projeto, o que ele faz e para quem ele é destinado.
+Esse projeto é um modelo de backend com FastAPI utilizando os recursos necessários para um bom funcionamento de uma aplicação backend
 
 ## Requisitos
 
@@ -22,12 +22,13 @@ cd nome-do-repositorio
 ```
 
 ### 2. Crie um ambiente virtual python
+
 ```bash
-python -m venv nome_do_ambiente 
+python -m venv nome_do_ambiente
 ```
 
 ### 3. Baixe as dependências do projeto
+
 ```bash
 pip install -r requirements.txt
 ```
-
